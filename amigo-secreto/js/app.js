@@ -17,7 +17,17 @@ function adicionar() {
 }
 
 function sortear() {
+    let listaSorteio = document.getElementById('lista-sorteio');
+
     embaralha(amigos);
+
+    for (let i = 0; i < amigos.length; i++) {
+        if (i == amigos.length - 1) {
+            listaSorteio.innerHTML = listaSorteio.innerHTML + amigos[i] + ' --> ' + amigos[0] + '<br>'
+        } else {
+            listaSorteio.innerHTML = listaSorteio.innerHTML + amigos[i] + ' --> ' + amigos[i + 1] + '<br>'
+        }
+    }
 }
 
 function embaralha(lista) {
