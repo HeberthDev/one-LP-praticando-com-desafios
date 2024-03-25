@@ -9,6 +9,11 @@ function adicionar() {
         return;
     }
 
+    if (amigos.includes(amigo.value)) {
+        alert('Nome já adicionado.');
+        return;
+    }
+
     amigos.push(amigo.value);
 
     if (listaAmigos.textContent == '') {
